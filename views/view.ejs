@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <%= include /header.ejs %>
+</head>
+
+<body>
+    <h1>View Recipies</h1>
+    <% for(var i=0; i<recipieList.length; i++) {%>
+        <div class="col s12 m7">
+            <div class="card medium horizontal">
+                <div class="card-image"> <img src="http://lorempixel.com/100/190/food/"> </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5 class="header"><%= recipieList[i].name %></h5>
+                        <p>
+                            <%= recipieList[i].description %>
+                        </p>
+                    </div>
+                    <div class="card-action"> <a href="/view/<%= recipieList[i]._id %>">View Recipie</a> </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+</body>
+
+</html>

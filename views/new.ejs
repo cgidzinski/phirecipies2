@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <%= include /header.ejs %>
+</head>
+
+<body>
+    <h1>New Recipie</h1>
+    <form action="/add" method="post"> Recipie Name:
+        <input type="text" name="recipieName">
+        <br> Recipie Description:
+        <input type="text" name="recipieDescription">
+        <br> Recipie Instructions:
+        <input type="text" name="recipieInstructions">
+        <br>
+        <input class="waves-effect waves-light btn" type="submit" value="Submit"> </form>
+</body>
+
+</html>
